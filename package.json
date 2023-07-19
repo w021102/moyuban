@@ -8,6 +8,8 @@
     "lint": "vue-cli-service lint"
   },
   "dependencies": {
+    "@ant-design/icons": "^5.1.4",
+    "@ant-design/icons-vue": "^6.1.0",
     "ant-design-vue": "^4.0.0-rc.6",
     "axios": "^1.4.0",
     "core-js": "^3.8.3",
@@ -50,5 +52,13 @@
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ]
+  ],
+  "rules": {
+    "generator-star-spacing": "off",
+    "no-tabs":"off",
+    "no-unused-vars":"off",
+    "no-console":"off",
+    "no-irregular-whitespace":"off",
+    "no-debugger": "off"
+}
 }
