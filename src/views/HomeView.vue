@@ -33,8 +33,8 @@
         </div>
       </div>
     </div>
-    <!-- <loginPage></loginPage> -->
     <router-view></router-view>
+
   </div>
 </template>
 

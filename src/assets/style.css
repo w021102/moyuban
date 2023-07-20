@@ -30,6 +30,9 @@ ul {
 ul li {
     list-style: none;
 }
+article, aside, figure, footer, header, hgroup, section {
+    display: block;
+}
 :foot {
     --scheme-main: $black;
     --scheme-main-bis: $black;

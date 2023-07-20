@@ -10,12 +10,17 @@
   "dependencies": {
     "@ant-design/icons": "^5.1.4",
     "@ant-design/icons-vue": "^6.1.0",
+    "@vueup/vue-quill": "^1.0.0-alpha.40",
     "ant-design-vue": "^4.0.0-rc.6",
     "axios": "^1.4.0",
     "core-js": "^3.8.3",
     "element-plus": "^2.3.8",
+    "markdown-it": "^13.0.1",
+    "quill-delta-to-markdown": "^0.6.0",
+    "quill-image-extend-module": "^1.1.2",
     "register-service-worker": "^1.7.2",
     "vue": "^3.2.13",
+    "vue-quill-editor": "^3.0.6",
     "vue-router": "^4.0.3",
     "vuex": "^4.0.0"
   },
@@ -45,7 +50,9 @@
     "parserOptions": {
       "parser": "@babel/eslint-parser"
     },
-    "rules": {}
+    "rules": {
+      "no-unused-vars":"off"
+    }
   },
   "browserslist": [
     "> 1%",
@@ -55,10 +62,10 @@
   ],
   "rules": {
     "generator-star-spacing": "off",
-    "no-tabs":"off",
-    "no-unused-vars":"off",
-    "no-console":"off",
-    "no-irregular-whitespace":"off",
+    "no-tabs": "off",
+    "no-unused-vars": "off",
+    "no-console": "off",
+    "no-irregular-whitespace": "off",
     "no-debugger": "off"
-}
+  }
 }
