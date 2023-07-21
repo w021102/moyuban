@@ -5,12 +5,22 @@ import store from './store'
 import Antd from 'ant-design-vue'
 import 'ant-design-vue/dist/reset.css';
 import './assets/style.css'
-// 全局挂载 VueQuillEditor
-import VueQuillEditor from 'vue-quill-editor'
-import 'quill/dist/quill.core.css'
-import 'quill/dist/quill.snow.css'
-import 'quill/dist/quill.bubble.css'
 
-// Vue.use(VueQuillEditor)
+import VueMarkdownEditor from '@kangc/v-md-editor';
+import '@kangc/v-md-editor/lib/style/base-editor.css';
+import '@kangc/v-md-editor/lib/plugins/copy-code/copy-code.css';
+import createCopyCodePlugin from '@kangc/v-md-editor/lib/plugins/copy-code/index';
+import githubTheme from '@kangc/v-md-editor/lib/theme/github.js';
+import '@kangc/v-md-editor/lib/theme/style/github.css';
+import hljs from 'highlight.js';
 
-createApp(App).use(Antd).use(VueQuillEditor).use(store).use(router).mount('#app')
+VueMarkdownEditor.use(githubTheme, {
+  Hljs: hljs,
+  codeHighlightExtensionMap: {
+    vue: 'html',
+  },
+});
+VueMarkdownEditor.use(createCopyCodePlugin());
+
+
+createApp(App).use(Antd).use(VueMarkdownEditor).use(store).use(router).mount('#app')

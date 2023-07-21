@@ -33,6 +33,9 @@ ul li {
 article, aside, figure, footer, header, hgroup, section {
     display: block;
 }
+.v-md-editor .v-md-editor__code {
+    justify-content: flex-start;
+  }
 :foot {
     --scheme-main: $black;
     --scheme-main-bis: $black;
