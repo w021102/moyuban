@@ -1,15 +1,15 @@
 import axios from 'axios' 
 import { Promise } from 'core-js';
 
-const service = axios.create({
+const instance = axios.create({
     // 设置基础url
-    baseURL: ,
+    baseURL: ' https://631adb3.r17.cpolar.top',
     // 请求超时时间
     timeout:5000
 })
 
 // 请求拦截
-service.interceptors.request.use(
+instance.interceptors.request.use(
     config => {
         config.headers['Content-type'] = "application/json; charset=utf-8";
         config.data = JSON.stringify(config.data)
@@ -26,7 +26,7 @@ service.interceptors.request.use(
 );
 
 // 响应拦截
-service.interceptors.response.use(
+instance.interceptors.response.use(
     response =>{
         if (response.data.code === 0 ) {     
             return Promise.resolve(response.data)
@@ -39,11 +39,12 @@ service.interceptors.response.use(
     }
 )
 
-export default service
+// export default instance
 
 /* 统一封装get请求 */
 export const get = (url, params, config = {}) => {
     return new Promise((resolve, reject) => {
+      // eslint-disable-next-line
       instance({
         method: 'get',
         url,
@@ -60,6 +61,7 @@ export const get = (url, params, config = {}) => {
   /* 统一封装post请求  */
   export const post = (url, data, config = {}) => {
     return new Promise((resolve, reject) => {
+      // eslint-disable-next-line
       instance({
         method: 'post',
         url,
@@ -75,6 +77,7 @@ export const get = (url, params, config = {}) => {
   
   export const del = (url, data, config = {}) => {
     return new Promise((resolve, reject) => {
+      // eslint-disable-next-line
       instance({
         method: 'delete',
         url: url,

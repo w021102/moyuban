@@ -62,6 +62,12 @@ const wrapperCol = {
 const tagList = () =>{
   openTag.value = true;
 }
+const publishText = () => {
+  fetch('https://jsonplaceholder.typicode.com/posts/1')
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.error(error));
+}
 </script>
  
 <style lang="scss">
